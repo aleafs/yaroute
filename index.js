@@ -2,4 +2,4 @@
 
 "use strict";
 
-module.exports = require(__dirname + '/lib/route.js');
+module.exports = require([__dirname, process.env.ROUTE_COV ? 'lib-cov' : 'lib', 'route.js'].join('/'));
