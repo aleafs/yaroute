@@ -1,5 +1,5 @@
-
 [![Build Status](https://travis-ci.org/aleafs/yaroute.png?branch=master)](https://travis-ci.org/aleafs/yaroute)
+[![Dependency Status](https://gemnasium.com/aleafs/yaroute.png)](https://gemnasium.com/aleafs/yaroute)
 
 ### About
 
