@@ -1,0 +1,23 @@
+{
+  "name": "route",
+  "version": "0.0.1",
+  "author": "Aleafs Zhang (zhangxc83@gmail.com)",
+  "contributors": [
+  ],
+  "homepage": "https://github.com/aleafs/route",
+  "description": "HTTP url route module",
+  "keywords": [ "http", "route" ],
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=0.6.9"
+  },
+  "devDependencies": {
+    "should"  : ">=0.6.3",
+    "mocha"   : ">=1.0.3"
+  },
+  "scripts": {
+    "main"  : "index.js",
+    "test"  : "make test"
+  }
+}
