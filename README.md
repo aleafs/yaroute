@@ -13,8 +13,4 @@ $ npm install yaroute
 
 ### Usage
 
-```javascript
-
-var Route = require('yaroute');
-
-```
+see `test/route.test.js` for usage.
