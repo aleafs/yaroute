@@ -66,10 +66,10 @@ describe('app route interface', function () {
       }
     };
 
-    _me.route(Request('contrOller/' + '/action/af', null), rep);
-    _me.route(Request('/controller/action/Help/tag1/', null), rep);
-    _me.route(Request('/directory', null), rep);
-    _me.route(Request('/i/am.not.defined', null), rep);
+    _me.dispatch(Request('contrOller/' + '/action/af', null), rep);
+    _me.dispatch(Request('/controller/action/Help/tag1/', null), rep);
+    _me.dispatch(Request('/directory', null), rep);
+    _me.dispatch(Request('/i/am.not.defined', null), rep);
 
     /**
      * @ 根路径
@@ -80,7 +80,7 @@ describe('app route interface', function () {
       }));
     });
 
-    _me.route(Request('/i/am.not.defined'), rep);
+    _me.dispatch(Request('/i/am.not.defined'), rep);
   });
   /* }}} */
 
@@ -109,7 +109,7 @@ describe('app route interface', function () {
 
     var _me = Router.initFromDirectory(__dirname + '/fixtures/route');
     ['/hello?a=b', '/hello/world', '/hello/.ignore', '/root'].forEach(function (s, i) {
-      _me.route(Request(s), rep, i);
+      _me.dispatch(Request(s), rep, i);
     });
   });
   /* }}} */

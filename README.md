@@ -14,3 +14,8 @@ $ npm install yaroute
 ### Usage
 
 see `test/route.test.js` for usage.
+
+### License
+
+MIT
+
