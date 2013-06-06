@@ -114,5 +114,34 @@ describe('app route interface', function () {
   });
   /* }}} */
 
+  /* {{{ should_add_prefix_works_fine() */
+  it('should_add_prefix_works_fine', function (done) {
+
+    var __message = [];
+    var rep = {};
+
+    rep.writeHead = function () {
+    };
+    rep.end = function (m) {
+      __message.push(m);
+      if (__message.length < 2) {
+        return;
+      }
+
+      __message.sort().should.eql([JSON.stringify({
+        "url":"/name1/hello?a=b","suburl":"/?a=b","action":"/hello"
+      }), undefined]);
+      done();
+    };
+
+    var _me = Router.create();
+    _me.initFromDirectory(__dirname + '/fixtures/route', '/name1');
+    ['/name1/hello?a=b', '/hello/world'].forEach(function (s, i) {
+      _me.dispatch(Request(s), rep, i);
+    });
+
+  });
+  /* }}} */
+
 });
 
