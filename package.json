@@ -27,7 +27,7 @@
       "pattern": "/yaroute/lib"
     },
     "travis-cov": {
-      "threshold": 98
+      "threshold": 97
     }
   }
 }
