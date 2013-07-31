@@ -15,10 +15,19 @@
   "devDependencies": {
     "should"  : ">=0.6.3",
     "mocha"   : ">=1.0.3",
-    "jscover" : ">=0.2.4"
+    "blanket": "*",
+    "coveralls" : "*",
+    "travis-cov": "*",
+    "mocha-lcov-reporter": "*"
   },
   "scripts": {
     "main"  : "index.js",
-    "test"  : "make test"
+    "test"  : "make test",
+    "blanket": {
+      "pattern": "/yaroute/lib"
+    },
+    "travis-cov": {
+      "threshold": 98
+    }
   }
 }
